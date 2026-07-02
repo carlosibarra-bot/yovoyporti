@@ -27,7 +27,7 @@
       const lead = node.nodeValue.match(/^\s*/)[0], tail = node.nodeValue.match(/\s*$/)[0];
       node.nodeValue = lead + next + tail;
     }
-    $('[placeholder]').forEach(el => {
+    $$('[placeholder]').forEach(el => {
       if (!el.dataset.esPlaceholder) el.dataset.esPlaceholder = el.placeholder;
       el.placeholder = currentLang === 'en' ? (placeholderTranslations[el.dataset.esPlaceholder] || el.dataset.esPlaceholder) : el.dataset.esPlaceholder;
     });
